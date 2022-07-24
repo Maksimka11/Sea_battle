@@ -1,0 +1,1 @@
+.registration { display: grid; grid-template-columns: 1fr 25rem 1fr; grid-template-rows: 21vh 20rem 21vh; justify-content: center; } .card { grid-area: 2 / 2 / 2 / 2; } .txt { font-size: 13px; margin-left: 20%; }

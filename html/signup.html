@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="regestration.css">
+		<title>Sign Up</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="registration">
+				<div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 25rem; height: 25rem;">
+					<div class="card-body">
+						<form>
+							<div class="mb-3">
+							<label for="login" class="form-label">Login</label>
+							<input type="text" class="form-control" id="inputLogin">
+							</div>
+							<div class="mb-3">
+							<label for="password" class="form-label">Password</label>
+							<input type="password" class="form-control" id="inputPass">
+							</div>
+							<div class="mb-3">
+							<label for="repeatPass" class="form-label">Repeat password</label>
+							<input type="password" class="form-control" id="repeatPass">
+							</div>
+							<p class="txt"> Already have an account? <a href="signin.html">Sign in</a></p>
+							<button type="button" onclick="registerValidate(inputLogin.value, inputPass.value, repeatPass.value)" class="btn btn-primary">Sign up</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	</body>
+</html>
+

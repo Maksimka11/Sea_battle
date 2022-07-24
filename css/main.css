@@ -1,0 +1,283 @@
+.main {
+	display: grid;
+	grid-template-columns: 0.7fr 2fr 0.7fr 2fr;
+	grid-template-rows: 10vh 80vh 10vh;
+	justify-content: center;
+	justify-items: center;
+}
+
+.navigator {
+	grid-area: 2 / 1 / 4 / 1;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 2fr;
+	border-color: black;
+}
+
+.icon.logout {
+	grid-row: 4 / 4;
+	margin-top: 100%;
+}
+
+.icon {
+	user-select: none;
+	font-size: 10px;
+	text-align: center;
+	align-self: center;
+}
+
+.battleside.user {
+	grid-area: 2 / 2 / 2 / 2;
+}
+
+.battleside.pc {
+	grid-area: 2 / 4 / 2 / 4;
+}
+
+.battleside {
+	display: grid;
+	grid-template-rows: 2fr 1fr;
+}
+
+.board {
+	/*width: 300px;
+	height: 300px;*/
+	align-self: center;
+}
+
+.board.first {
+	grid-row: 1 / 1;
+	border: 7px solid #597f99;
+}
+
+.board.second {
+	grid-row: 1 / 1;
+	border: 7px solid #ab2732;
+}
+
+.icon.swords {
+	grid-row: 1 / 1;
+	align-self: center;
+}
+
+.fight {
+	grid-area: 2 / 3 / 2 / 3;
+	display: grid;
+	grid-template-rows: 2fr 1fr;
+
+}
+
+.card-body.ships {
+	width: 300px;
+	height: 100px;
+	align-self: center;
+	grid-row: 2 / 2;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.ship-stat {
+	font-size: 10px;
+	text-align: center;
+	align-self: center;
+	user-select: none;
+}
+
+.ship-count {
+	font-weight: bold;
+}
+
+.card.first {
+	background-color: rgb(232, 239, 241);
+}
+
+.card.second {
+	background-color: rgb(241, 232, 232);
+}
+
+.card.first.hidden {
+	display: none;
+}
+
+.card.second.hidden {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.battlefield {
+	position: relative;
+}
+
+.battlefield-table {
+	width: 300px;
+	height: 300px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background: rgba(124, 128, 183, 0.05);
+}
+
+.battlefield-item {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	border: 1px solid rgba(37, 37, 37, 0.15);
+}
+
+.battlefield-item__active {
+	background: #ab273218;
+}
+
+.marker {
+	position: absolute;
+	user-select: none;
+	top: 0;
+	left: 0;
+	width: 32px;
+	height: 32px;
+	font-size: 13px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.marker-row {
+	left: -37px;
+}
+
+.marker-column {
+	top: -37px;
+}
+
+.ship {
+	display: block !important;
+	position: absolute;
+	border: 2px solid #597f99;
+	background: #597f9969;
+	margin: -1px;
+	width: calc(32px);
+	height: calc(33px * 1.05);
+	z-index: 1;
+}
+
+.ship-row-2 {
+	width: calc(32px * 1.95);
+}
+
+.ship-row-3 {
+	width: calc(32px * 2.90);
+}
+
+.ship-row-4 {
+	width: calc(32px * 3.85);
+}
+
+.ship-column-2 {
+	height: calc(33px * 2.05);
+}
+
+.ship-column-3 {
+	height: calc(33px * 3.0);
+}
+
+.ship-column-4 {
+	height: calc(33px * 3.95);
+}
+
+.shot {
+	user-select: none;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.shot-missed {
+	color: #1d1d1d;
+}
+
+.shot-wounded {
+	color: #ab2732;
+	z-index: 1;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 32px;
+}
+
+.shot-wounded::after {
+	width: calc(32px / 1.15);
+	height: calc(33px);
+}
+
+.shot-wounded::before {
+	width: calc(32px / 1.15);
+	height: calc(33px);
+}
+
+.shot-killed {
+	margin: -1px;
+	width: calc(32px);
+	height: calc(33px * 1.05);
+	z-index: 1;
+	border: 2px solid #ab2732;
+	background-color: #ab273227;
+}
+
+
+/*----MyStats & Rating----*/
+
+.main_stat {
+	display: grid;
+	grid-template-columns: 0.7fr 3.7fr 1fr;
+	grid-template-rows: 10vh 80vh 10vh;
+	justify-content: center;
+	justify-items: center;
+}
+
+.stats {
+	grid-area: 2 / 2 / 2 / 2;
+	justify-self: start;
+	padding-left: 5vw;
+	font-size: 15px;
+}
+
+ol.out {
+	margin-left: 11vw;
+}
+
+ol {
+	margin-left: 5vw;
+}
+
+li {
+	list-style-type: none;
+}
+
+li.gray {
+	color: darkgray;
+}
+
+.best-players {
+	margin-left: 8vw;
+	padding-left: 5px;
+	width: 25rem;
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+.player-login {
+	margin-left: 2vw;
+}
+
+.win-rate {
+	margin-left: 0.5vw;
+}
+
+.game-count {
+	margin-left: 0.5vw;
+}
